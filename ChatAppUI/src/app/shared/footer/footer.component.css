@@ -1,0 +1,15 @@
+.container, .inner-footer {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    position: fixed;        
+    background: #333;
+    bottom: 0;
+    color: #fff;
+}
+.inner-footer {
+    height: 50px;
+}
+.container {
+    height: 30px;
+}
