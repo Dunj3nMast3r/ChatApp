@@ -1,0 +1,13 @@
+<h3 (click)="toggle()" style="padding-bottom: 55px"><i class="fa fa-comments "></i></h3>
+<div class = "menu" *ngIf="show_dialog">
+    <p (click)="toggle()">close</p>
+    <ol class="sub-menu">
+        <li class="menu-item"><a href="#0">Username</a></li>
+        <input type="text" class="form-control" id="username">
+        <li class="menu-item"><a href="#0">Password</a></li>
+        <input type="text" class="form-control" id="password">
+        <li class="menu-item"><a href="#0">About(Optional)</a></li>
+        <input type="text" class="form-control" id="about">
+        <li class="menu-item"><a href="#" class="btn btn-primary btn-lg active" role="button">Submit</a></li>
+    </ol>
+</div>
