@@ -1,5 +1,5 @@
-# ChatBot
-Chat Bot with Springboot and Angular 
+# ChatAPP
+Chat App with Springboot and Angular 
 Instructions to Run the application :
 1. Clone the repo / download as zip.
 2. from springboot CLI : boot run / from STS run as springboot app.
