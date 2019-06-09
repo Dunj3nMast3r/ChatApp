@@ -1,13 +1,31 @@
 <h3 (click)="toggle()" style="padding-bottom: 55px"><i class="fa fa-comments "></i></h3>
-<div class = "menu" *ngIf="show_dialog">
+<p (click)="toggle()">close</p>
+<div class="menu" *ngIf="show_dialog">
+  <ol class="sub-menu" *ngIf="!show_dialog_msg">
+    <li class="menu-item"><a href="#">Username</a></li>
+    <input type="text" class="form-control" id="username" [(ngModel)]="user.username" required>
+    <li class="menu-item"><a href="#">Password</a></li>
+    <input type="text" class="form-control" id="password" [(ngModel)]="user.password" required>
+    <li class="menu-item"><a href="#">Topic</a></li>
+    <input type="text" class="form-control" id="topic" [(ngModel)]="user.topic" required>
+    <li class="menu-item"><a href="#">{{message}}</a></li>
+    <li class="menu-item"><a (click)="connect()" class="btn btn-primary btn-lg active" style="cursor: pointer"
+        role="button">Submit</a></li>
+  </ol>
+  <ol class="talk-bubble tri-right round btm-left" *ngIf="show_dialog_msg">
     <p (click)="toggle()">close</p>
-    <ol class="sub-menu">
-        <li class="menu-item"><a href="#0">Username</a></li>
-        <input type="text" class="form-control" id="username">
-        <li class="menu-item"><a href="#0">Password</a></li>
-        <input type="text" class="form-control" id="password">
-        <li class="menu-item"><a href="#0">About(Optional)</a></li>
-        <input type="text" class="form-control" id="about">
-        <li class="menu-item"><a href="#" class="btn btn-primary btn-lg active" role="button">Submit</a></li>
-    </ol>
+    <li class="message-box">
+      <ol class="message other-message" *ngFor="let msg of content">
+        {{msg}}
+      </ol>
+    </li>
+    <li class="chat-message clearfix">
+      <textarea name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3"
+        [(ngModel)]="textmessage"></textarea>
+      <i class="fa fa-file-o"></i> &nbsp;
+      <i class="fa fa-file-image-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <ol class="btn btn-primary btn-lg active" style="cursor: pointer" role="button" (click)="sendName()">Send
+      </ol>
+    </li>
+  </ol>
 </div>

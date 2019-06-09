@@ -1,94 +1,150 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-    font-weight: 400;
-    list-style-type: none;
-    font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 400;
+  list-style-type: none;
+  font-style: normal;
 }
 
 body {
-    background: linear-gradient(to right, #c04848, #480048);
-    height: 100vh;
+  background: linear-gradient(to right, #c04848, #480048);
+  height: 100vh;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
+
 .menu {
-    position: fixed;
-    right: 20px;
-    bottom: 65px;
-    top: 60px;
+  position: fixed;
+  right: 20px;
+  bottom: 65px;
+  top: 60px;
 }
+
 div {
-    line-height: 1.4;
-    font-family: "Space Mono", monospace;
-    background: #1d1f20;
-    padding: 25px 35px;
-    width: 300px;
-    top: calc(50vh - 247px);
-    top: 0;
-    right:0;
-    position: fixed;
-    border-radius: 16px;
-    box-shadow: 0 0 60px -15px black;
-    transform: scale(0);
-    transition: all 0.25s;
-    font-size: 18px
+  line-height: 1.4;
+  font-family: "Space Mono", monospace;
+  background: #1d1f20;
+  padding: 25px 35px;
+  width: 300px;
+  top: calc(50vh - 247px);
+  top: 0;
+  right: 0;
+  position: fixed;
+  border-radius: 16px;
+  box-shadow: 0 0 60px -15px black;
+  transform: scale(0);
+  transition: all 0.25s;
+  font-size: 18px
 }
 
 .menu {
-    transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
 }
 
-div > ol > li {
-    margin: 20px 0;
-    color: #efc371;
-}
-
-div > ol > li:last-of-type {
-    color: #efc371;
+div>ol>li {
+  margin: 20px 0;
+  color: #efc371;
 }
 
 div a:hover {
-    color: #dd925f;
+  color: #dd925f;
 }
 
 h3 {
-    position: fixed;
-    font-family: "Roboto Mono", monospace;
-    font-size: 60px;
-    color: #cfd8dc;
-    right: 20px;
-    bottom: 20px;
-    cursor: pointer;
-    transition: all 0.3s;
+  position: fixed;
+  font-family: "Roboto Mono", monospace;
+  font-size: 60px;
+  color: #cfd8dc;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 h3:hover {
-    border-bottom: 6px dotted #cfd8dc;
-    padding-bottom: 30px;
+  border-bottom: 6px dotted #cfd8dc;
+  padding-bottom: 30px;
 }
+
 .fa-comments {
-    color: crimson;
+  color: crimson;
 }
-fa-comments::before, fa-comments::after {
-    box-sizing: border-box;
-    z-index: 10000;
-    color: crimson;
-    bottom: 50px;
+
+fa-comments::before,
+fa-comments::after {
+  box-sizing: border-box;
+  z-index: 10000;
+  color: crimson;
+  bottom: 50px;
 }
+
 .form-control {
-    text-align: -webkit-center;
+  text-align: -webkit-center;
 }
+
 p {
-    font-family: "Roboto Mono", monospace;
-    float: right;
-    cursor: pointer;
-    font-size: 16px;
-    color: #cfd8dc;
-    transition: all 0.2s;
+  font-family: "Roboto Mono", monospace;
+  float: right;
+  cursor: pointer;
+  font-size: 16px;
+  color: #cfd8dc;
+  transition: all 0.2s;
+}
+
+.float-right {
+  float: right;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  font: 14px/22px "Lato", Arial, sans-serif;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  resize: none;
+
+}
+
+.fa-file-o,
+.fa-file-image-o {
+  font-size: 16px;
+  color: gray;
+  cursor: pointer;
+}
+
+.my-message {
+  background: #86BB71;
+  border-radius: 3px;
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+  text-align: left;
+  font-size: small;
+  color: #480048
+}
+
+.other-message {
+  background: #94C2ED;
+  border-radius: 3px;
+  display: block;
+  padding: 10px;
+  text-align: justify;
+  margin-top: 10px;
+  text-align: right;
+  font-size: small;
+  color: #480048
+}
+
+.message-box {
+  overflow-y: auto;
+  width: -webkit-fill-available;
+  height: 250px;
+  max-height: 250px
 }
